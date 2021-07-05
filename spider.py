@@ -167,19 +167,6 @@ def gotoLink(url):
 
 # 此函数将数据列表加入到 mysql 数据库中
 def saveDB(dataList, homeData):
-    # # 大事记、出生、逝世的边界下标
-    # bigthingEnd = 0
-    # bornEnd = 0
-    # deathEnd = 0
-    # # 确定哪些是大事件、出生、逝世——这样我们就可以通过三个for循环将不同的内容放在不同的数据库里面
-    # # 为什么这么麻烦？不要问我，自己看维基的页面布局——wikisb
-    # for index, data in enumerate(dataList):   #data代表数据中的一个元素
-    #     if data == "出生":
-    #         bigthingEnd = index
-    #     if data == "逝世":
-    #         bornEnd = index
-    #     if re.match(reg5, data):    # 维基里面 “节假日和风俗” 这一字符串有时候不一定是这个，可能是 “节日” 之类的，所以用正则判断一下
-    #         deathEnd = index
     resList = listIndex(dataList)
     bigthingEnd = resList[0]
     bornEnd = resList[1]
@@ -294,7 +281,7 @@ def saveImg(homeData, peopleData):
             f.close()
 
 
-# 类别开列表的 ”大事件“、”出生“、”逝世“
+# 该函数查找爬取到的数据列表中，大事件、出生、逝世的下标，进行进一步列表分类
 def listIndex(dataList):
     bigthingEnd = 0
     bornEnd = 0
