@@ -15,6 +15,16 @@
 
 
 
+### 数据效果图：
+
+![](https://raw.githubusercontent.com/acg78219/wikiCrawler/master/static/image/1.jpg)
+
+
+
+![](https://raw.githubusercontent.com/acg78219/wikiCrawler/master/static/image/2.jpg)
+
+
+
 ### 文件
 
 - spider.py
